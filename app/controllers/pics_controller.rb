@@ -7,6 +7,7 @@ class PicsController < ApplicationController
   end
 
   def show
+
   end
     
   def new
@@ -14,14 +15,12 @@ class PicsController < ApplicationController
   end
 
   def create
-    @pic = Pic.new(pic_params)
-
+    @pic = current_user.pics.build(pic_params)
     if @pic.save
-      redirect_to @pic, notice: "Posted Successfully!!"
+      redirect_to @pic,notice: "Yesss! It was posted!"
     else
       render 'new'
     end
-
   end
 
   private
