@@ -9,6 +9,7 @@ class PicsController < ApplicationController
   end
   def create
     @pic = Pic.new(pic_params)
+
   end
 
   private
