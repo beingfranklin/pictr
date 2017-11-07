@@ -1,4 +1,4 @@
-%h1= @pic.title
-%p= @pic.description
+%h1= @pic.title if @pic.present?
+%p= @pic.description if @pic.present?
 
 = link_to "Back", root_path
