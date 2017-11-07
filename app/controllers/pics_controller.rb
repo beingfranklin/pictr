@@ -4,7 +4,7 @@ class PicsController < ApplicationController
 
   
   def index
-
+    @pics = Pic.all.order("created_at DESC")
   end
 
   def show
@@ -17,6 +17,11 @@ class PicsController < ApplicationController
 
   def create
     @pic = Pic.new(pic_params)
+    if @pic.save
+      redirect_to @pic,notice: "Yesss! It was posted!"
+    else
+      render 'new'
+    end
   end
  
 
