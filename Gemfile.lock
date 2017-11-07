@@ -207,7 +207,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
-  devise
+  devise (~> 4.2)
   haml (~> 5.0, >= 5.0.4)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
