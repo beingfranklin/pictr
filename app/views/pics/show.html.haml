@@ -1,5 +1,6 @@
 %h1= @pic.title if @pic.present?
-%p= @pic.description if @pic.present?
+%p = @pic.description if @pic.present?
+%p = @pic.user.email
 
 = link_to "Back", root_path
 = link_to "Edit", edit_pic_path
